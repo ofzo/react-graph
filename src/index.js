@@ -1,52 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import Context from "./context";
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
-// console.log(React)
-class Entry extends React.Component {
-    constructor(props) {
-        super(props)
-        console.group("------------ mount ------------")
-        this.state = {
-            show: true,
-            theme: "white"
-        }
-    }
-    static contextType = Context
-    componentDidMount() {
-        console.groupEnd()
-    }
-    render() {
-        if (this.state.show) {
-            return <>
-                <span onClick={() => {
-                    this.setState({
-                        theme: "dark"
-                    })
-                }}> theme {this.context} </span>
-                <App onDelete={() => {
-                    console.group("------------ delete ------------")
-                    this.setState({
-                        show: false
-                    }, () => {
-                        console.groupEnd()
-                    })
-                }} />
-
-            </>
-        }
-        return null
-    }
-}
 
 ReactDOM.render(
     <React.StrictMode>
-        <Context.Provider value="123">
-            <Entry />
-        </Context.Provider>
+        <App />
     </React.StrictMode>,
     document.getElementById('root')
 );
