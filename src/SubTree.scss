@@ -1,0 +1,47 @@
+@font-face {
+    font-family: element-icons;
+    src: url(./fonts/element-icons.woff) format("woff"), url(./fonts/element-icons.ttf) format("truetype");
+    font-weight: 400;
+    font-display: "auto";
+    font-style: normal;
+}
+
+.sub-tree {
+    white-space: nowrap;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+.sub-tree .fns {
+    display: inline-flex;
+    padding: 0 10px;
+    &.vertical {
+        display: flex;
+    }
+}
+
+.sub-tree .name {
+    position: relative;
+    padding: 0 10px;
+    line-height: 2;
+    font-family: "JetBrains Mono";
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    &.selected {
+        box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
+    }
+    .fn {
+        position: sticky;
+        left: 0;
+    }
+    .arrow {
+        cursor: pointer;
+        font-family: element-icons;
+        font-style: normal;
+        &.fold::before {
+            content: "\e6e0";
+        }
+        &.un-fold::before {
+            content: "\e6df";
+        }
+    }
+}

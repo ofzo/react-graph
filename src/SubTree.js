@@ -1,35 +1,44 @@
 // @ts-nocheck
-import React, { useState } from "react"
-import "./SubTree.css"
-let colors = ["FDDD81", "99D4A9", "FFB680", "A2DEE3", "A1C2F9", "F5A19A"]
-function pickColor(parentColor, index) {
-    let colors_s = colors.slice(0).filter(color => color !== parentColor)
-    index = index % colors_s.length
-    return colors_s[index]
-}
+import md5 from "md5";
+import React, { useState } from "react";
+import Context from "./context";
+import "./SubTree.scss";
 
+
+function randomColor(key) {
+    return "#" + parseInt(md5(key).slice(0, 6), 36).toString(16).slice(0, 6) + "44"
+}
 /**
  *
  * @param {any} props
  */
 export default function Subtree(props = {}) {
 
-    let [flod, setFlod] = useState({})
+    let [fold, setFold] = useState({})
+
     return props.fns ? <>
         {
             Object.entries(props.fns).map(([key, fns], index) => {
-                let color = pickColor(props.color || "", index)
-                return <div className="sub-tree">
-                    <header className="name" style={{ backgroundColor: "#" + color + "88" }}>
-                        <i className="flod" onClick={() => {
-                            setFlod({
-                                ...flod,
-                                [index]: !flod[index]
-                            })
-                        }}>%</i> <sapn>{key}</sapn>
-                    </header>
+                return <div className="sub-tree" key={key}>
+                    <Context.Consumer>
+                        {
+                            ({ select, update }) =>
+                                <header className={"name " + (select === key ? 'selected' : '')} style={{ backgroundColor: randomColor(key) }} onClick={() => {
+                                    update(key)
+                                }}>
+                                    <div className="fn">
+                                        {(!fns || Object.keys(fns).length === 0) ? null : <i className={"arrow " + (fold[index] ? 'fold' : 'un-fold')} onClick={() => {
+                                            setFold({
+                                                ...fold,
+                                                [index]: !fold[index]
+                                            })
+                                        }}></i>} <span>{key}</span>
+                                    </div>
+                                </header>
+                        }
+                    </Context.Consumer>
                     <div className="fns">
-                        {flod[index] ? null : <Subtree fns={fns} key={key} color={color} index={index}></Subtree>}
+                        {fold[index] ? null : <Subtree fns={fns} key={key} index={index}></Subtree>}
                     </div>
                 </div>
             })

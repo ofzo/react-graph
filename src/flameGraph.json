@@ -55,23 +55,362 @@
                                         "runWithPriority": {
                                             "reactPriorityToSchedulerPriority": {},
                                             "Scheduler_runWithPriority": {
-                                                "commitRootImpl": {}
+                                                "commitRootImpl": {
+                                                    "getCurrentPriorityLevel": {},
+                                                    "runWithPriority": {
+                                                        "flushPassiveEffectsImpl": {
+                                                            "pushInteractions": {},
+                                                            "commitPassiveHookEffects": {},
+                                                            "captureCommitPhaseError": {},
+                                                            "popInteractions": {},
+                                                            "finishPendingInteractions": {},
+                                                            "flushSyncCallbackQueue": {
+                                                                "Scheduler_cancelCallback": {
+                                                                    "flushSyncCallbackQueueImpl": {
+                                                                        "runWithPriority": {}
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    "ReactBrowserEventEmitterIsEnabled": {},
+                                                    "getSelectionInformation": {},
+                                                    "ReactBrowserEventEmitterSetEnabled": {},
+                                                    "recordEffect": {},
+                                                    "commitBeforeMutationEffectOnFiber": {},
+                                                    "scheduleCallback": {
+                                                        "[anonymous]": {
+                                                            "flushPassiveEffects": {}
+                                                        }
+                                                    },
+                                                    "commitResetTextContent": {},
+                                                    "commitDetachRef": {},
+                                                    "@switch": {
+                                                        "@case Placement": {
+                                                            "commitPlacement": {
+                                                                "getHostParentFiber": {},
+                                                                "resetTextContent": {},
+                                                                "getHostSibling": {
+                                                                    "@while": {
+                                                                        "insertInContainerBefore": {},
+                                                                        "insertBefore": {},
+                                                                        "appendChildToContainer": {},
+                                                                        "appendChild": {}
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "@case PlacementAndUpdate": {
+                                                            "commitPlacement": {},
+                                                            "commitWork": {
+                                                                "@switch 1": {
+                                                                    "@case FunctionComponent, ForwardRef,MemoComponent,SimpleMemoComponent": {
+                                                                        "commitHookEffectList": {}
+                                                                    },
+                                                                    "@case Profiler": {},
+                                                                    "@case SuspenseComponent": {
+                                                                        "commitSuspenseComponent": {},
+                                                                        "attachSuspenseRetryListeners": {}
+                                                                    },
+                                                                    "@case SuspenseListComponent": {
+                                                                        "attachSuspenseRetryListeners": {}
+                                                                    },
+                                                                    "@case HostRoot": {
+                                                                        "commitHydratedContainer": {}
+                                                                    }
+                                                                },
+                                                                "commitContainer": {},
+                                                                "@switch 2": {
+                                                                    "@case FunctionComponent, ForwardRef,MemoComponent,SimpleMemoComponent": {
+                                                                        "commitHookEffectList": {}
+                                                                    },
+                                                                    "@case ClassComponent": {},
+                                                                    "@case HostComponent": {
+                                                                        "commitUpdate": {},
+                                                                        "updateEventListeners": {}
+                                                                    },
+                                                                    "@case HostText": {},
+                                                                    "@case HostRoot": {
+                                                                        "commitHydratedContainer": {}
+                                                                    },
+                                                                    "@case Profiler": {},
+                                                                    "@case SuspenseComponent": {
+                                                                        "commitSuspenseComponent": {},
+                                                                        "attachSuspenseRetryListeners": {}
+                                                                    },
+                                                                    "@case SuspenseListComponent": {
+                                                                        "attachSuspenseRetryListeners": {}
+                                                                    },
+                                                                    "@case IncompleteClassComponent": {},
+                                                                    "@case FundamentalComponent": {
+                                                                        "updateFundamentalComponent": {}
+                                                                    },
+                                                                    "@case ScopeComponent": {
+                                                                        "updateEventListeners": {}
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "@case Hydrating": {},
+                                                        "@case HydratingAndUpdate": {
+                                                            "commitWork": {}
+                                                        },
+                                                        "@case Update": {
+                                                            "commitWork": {}
+                                                        },
+                                                        "@case Deletion": {}
+                                                    },
+                                                    "flushPassiveEffects": {
+                                                        "runWithPriority": {
+                                                            "reactPriorityToSchedulerPriority": {
+                                                                "Scheduler_runWithPriority": {}
+                                                            }
+                                                        }
+                                                    },
+                                                    "prepareFreshStack 1": {
+                                                        "createWorkInProgress": {
+                                                            "createFiber": {
+                                                                "new FiberNode": {}
+                                                            }
+                                                        }
+                                                    },
+                                                    "startWorkOnPendingInteractions": {},
+                                                    "pushDispatcher": {},
+                                                    "pushInteractions": {},
+                                                    "startWorkLoopTimer": {},
+                                                    "workLoopSync": {
+                                                        "@while": {
+                                                            "performUnitOfWork": {
+                                                                "startWorkTimer": {
+                                                                    "beginWork": {
+                                                                        "@switch 1": {
+                                                                            "@case HostRoot": {
+                                                                                "pushHostRootContext": {},
+                                                                                "resetHydrationState": {}
+                                                                            },
+                                                                            "@case HostComponent": {
+                                                                                "pushHostContext": {},
+                                                                                "shouldDeprioritizeSubtree": {},
+                                                                                "markSpawnedWork": {}
+                                                                            },
+                                                                            "@case ClassComponent": {
+                                                                                "isLegacyContextProvider": {},
+                                                                                "pushLegacyContextProvider": {}
+                                                                            },
+                                                                            "@case HostPortal": {
+                                                                                "pushHostContainer": {}
+                                                                            },
+                                                                            "@case ContextProvider": {
+                                                                                "pushProvider": {}
+                                                                            },
+                                                                            "@case Profiler": {},
+                                                                            "@case SuspenseComponent": {
+                                                                                "pushSuspenseContext": {},
+                                                                                "setDefaultShallowSuspenseContext": {},
+                                                                                "updateSuspenseComponent": {},
+                                                                                "bailoutOnAlreadyFinishedWork": {}
+                                                                            },
+                                                                            "@case SuspenseListComponent": {
+                                                                                "updateSuspenseListComponent": {},
+                                                                                "pushSuspenseContext": {}
+                                                                            }
+                                                                        },
+                                                                        "bailoutOnAlreadyFinishedWork": {},
+                                                                        "@switch 2": {
+                                                                            "@case IndeterminateComponent": {
+                                                                                "mountIndeterminateComponent": {}
+                                                                            },
+                                                                            "@case LazyComponent": {
+                                                                                "mountLazyComponent": {}
+                                                                            },
+                                                                            "@case FunctionComponent": {
+                                                                                "resolveDefaultProps": {},
+                                                                                "updateFunctionComponent": {}
+                                                                            },
+                                                                            "@case ClassComponent": {
+                                                                                "resolveDefaultProps": {},
+                                                                                "updateClassComponent": {}
+                                                                            },
+                                                                            "@case HostRoot": {
+                                                                                "updateHostRoot": {}
+                                                                            },
+                                                                            "@case HostComponent": {
+                                                                                "updateHostComponent": {}
+                                                                            },
+                                                                            "@case HostText": {
+                                                                                "updateHostText": {}
+                                                                            },
+                                                                            "@case SuspenseComponent": {
+                                                                                "updateSuspenseComponent": {}
+                                                                            },
+                                                                            "@case HostPortal": {
+                                                                                "updatePortalComponent": {}
+                                                                            },
+                                                                            "@case ForwardRef": {
+                                                                                "resolveDefaultProps": {},
+                                                                                "updateForwardRef": {}
+                                                                            },
+                                                                            "@case Fragment": {
+                                                                                "updateFragment": {}
+                                                                            },
+                                                                            "@case Mode": {
+                                                                                "updateMode": {}
+                                                                            },
+                                                                            "@case Profiler": {
+                                                                                "updateProfiler": {}
+                                                                            },
+                                                                            "@case ContextProvider": {
+                                                                                "updateContextProvider": {}
+                                                                            },
+                                                                            "@case ContextConsumer": {
+                                                                                "updateContextConsumer": {}
+                                                                            },
+                                                                            "@case MemoComponent": {
+                                                                                "resolveDefaultProps": {},
+                                                                                "updateMemoComponent": {}
+                                                                            },
+                                                                            "@case SimpleMemoComponent": {
+                                                                                "updateSimpleMemoComponent": {}
+                                                                            },
+                                                                            "@case IncompleteClassComponent": {
+                                                                                "resolveDefaultProps": {},
+                                                                                "mountIncompleteClassComponent": {}
+                                                                            },
+                                                                            "@case SuspenseListComponent": {
+                                                                                "updateSuspenseListComponent": {}
+                                                                            },
+                                                                            "@case FundamentalComponent": {
+                                                                                "updateFundamentalComponent": {}
+                                                                            },
+                                                                            "@case ScopeComponent": {
+                                                                                "updateScopeComponent": {}
+                                                                            }
+                                                                        }
+                                                                    },
+                                                                    "completeUnitOfWork": {
+                                                                        "completeWork": {
+                                                                            "@switch": {
+                                                                                "@case IndeterminateComponent": {},
+                                                                                "@case LazyComponent": {},
+                                                                                "@case SimpleMemoComponent": {},
+                                                                                "@case FunctionComponent": {},
+                                                                                "@case ClassComponent": {
+                                                                                    "isLegacyContextProvider": {},
+                                                                                    "popLegacyContext": {}
+                                                                                },
+                                                                                "@case HostRoot": {
+                                                                                    "popHostContainer": {},
+                                                                                    "popTopLevelLegacyContextObject": {},
+                                                                                    "popHydrationState": {},
+                                                                                    "markUpdate": {},
+                                                                                    "updateHostContainer": {}
+                                                                                },
+                                                                                "@case HostComponent": {
+                                                                                    "popHostContext": {},
+                                                                                    "getRootHostContainer": {},
+                                                                                    "updateHostComponent": {},
+                                                                                    "markUpdate": {},
+                                                                                    "markRef": {}
+                                                                                },
+                                                                                "@case HostText": {
+                                                                                    "updateHostText": {},
+                                                                                    "getRootHostContainer": {},
+                                                                                    "getHostContext": {},
+                                                                                    "popHydrationState": {},
+                                                                                    "prepareToHydrateHostTextInstance": {},
+                                                                                    "markUpdate": {},
+                                                                                    "createTextInstance": {}
+                                                                                },
+                                                                                "@case ForwardRef": {},
+                                                                                "@case SuspenseComponent": {
+                                                                                    "popSuspenseContext": {},
+                                                                                    "popHydrationState": {},
+                                                                                    "prepareToHydrateHostSuspenseInstance": {},
+                                                                                    "markSpawnedWork": {},
+                                                                                    "resetHydrationState": {},
+                                                                                    "hasSuspenseContext": {},
+                                                                                    "renderDidSuspend": {},
+                                                                                    "renderDidSuspendDelayIfPossible": {}
+                                                                                },
+                                                                                "@case Fragment": {},
+                                                                                "@case Mode": {},
+                                                                                "@case Profiler": {},
+                                                                                "@case HostPortal": {
+                                                                                    "popHostContainer": {},
+                                                                                    "updateHostContainer": {}
+                                                                                },
+                                                                                "@case ContextProvider": {
+                                                                                    "popProvider": {}
+                                                                                },
+                                                                                "@case ContextConsumer": {},
+                                                                                "@case MemoComponent": {},
+                                                                                "@case IncompleteClassComponent": {
+                                                                                    "isLegacyContextProvider": {},
+                                                                                    "popLegacyContext": {}
+                                                                                },
+                                                                                "@case SuspenseListComponent": {
+                                                                                    "popSuspenseContext": {},
+                                                                                    "renderHasNotSuspendedYet": {},
+                                                                                    "findFirstSuspended": {},
+                                                                                    "cutOffTailIfNeeded": {},
+                                                                                    "resetChildFibers": {},
+                                                                                    "pushSuspenseContext": {},
+                                                                                    "setShallowSuspenseContext": {}
+                                                                                },
+                                                                                "@case FundamentalComponent": {
+                                                                                    "getInitialState": {},
+                                                                                    "createFundamentalStateInstance": {},
+                                                                                    "getFundamentalComponentInstance": {},
+                                                                                    "appendAllChildren 1": {},
+                                                                                    "mountFundamentalComponent": {},
+                                                                                    "cloneFundamentalInstance": {},
+                                                                                    "appendAllChildren 2": {},
+                                                                                    "shouldUpdateFundamentalComponent": {},
+                                                                                    "markUpdate": {}
+                                                                                },
+                                                                                "@case ScopeComponent": {
+                                                                                    "createScopeMethods": {},
+                                                                                    "getRootHostContainer": {},
+                                                                                    "updateEventListeners": {},
+                                                                                    "markRef": {},
+                                                                                    "markUpdate": {}
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    "resetContextDependencies": {},
+                                                    "popDispatcher": {},
+                                                    "stopInterruptedWorkLoopTimer": {},
+                                                    "prepareFreshStack 2": {},
+                                                    "markRootSuspendedAtTime": {},
+                                                    "ensureRootIsScheduled 1": {},
+                                                    "stopFinishedWorkLoopTimer": {},
+                                                    "resolveLocksOnRoot": {},
+                                                    "finishSyncRender": {},
+                                                    "ensureRootIsScheduled 2": {}
+                                                }
                                             }
-                                        }
+                                        },
+                                        "prepareFreshStack": {},
+                                        "startWorkOnPendingInteractions": {},
+                                        "pushDispatcher": {},
+                                        "pushInteractions": {},
+                                        "startWorkLoopTimer": {},
+                                        "workLoopSync": {}
                                     },
-                                    "prepareFreshStack": {},
-                                    "startWorkOnPendingInteractions": {},
-                                    "pushDispatcher": {},
-                                    "pushInteractions": {},
-                                    "startWorkLoopTimer": {},
-                                    "workLoopSync": {}
+                                    "ensureRootIsScheduled": {},
+                                    "flushSyncCallbackQueue": {}
                                 }
                             }
                         }
                     }
-                }
-            },
-            "Return getPublicRootInstance()": {}
+                },
+                "Return getPublicRootInstance()": {}
+            }
         }
     }
 }
