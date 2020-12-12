@@ -15,14 +15,19 @@
 .sub-tree .fns {
     display: inline-flex;
     padding: 0 10px;
+    box-sizing: border-box;
     &.vertical {
         display: flex;
+        flex-direction: column;
+        padding: 0 20px 10px 20px;
+        border-left: 2px solid;
+        border-right: 2px solid;
     }
 }
 
 .sub-tree .name {
     position: relative;
-    padding: 0 10px;
+    padding: 0 10px 0 30px;
     line-height: 2;
     font-family: "JetBrains Mono";
     transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -30,10 +35,17 @@
         box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
     }
     .fn {
-        position: sticky;
-        left: 0;
+        // position: sticky;
+        // left: 0;
+        .flod::after {
+            content: " {...}";
+            display: inline;
+            color: rgba($color: #000000, $alpha: 0.5);
+        }
     }
     .arrow {
+        position: absolute;
+        left: 10px;
         cursor: pointer;
         font-family: element-icons;
         font-style: normal;

@@ -1,6 +1,9 @@
 .App {
     width: 100vw;
     height: 100vh;
+    .back {
+        cursor: pointer;
+    }
 }
 .App .flag {
     position: fixed;

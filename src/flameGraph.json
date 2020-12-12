@@ -9,7 +9,8 @@
                     "this._internalRoot = createRootImpl() ": {
                         "Return createContainer()": {
                             "Return createFiberRoot()": {
-                                "FiberRoot = new FiberRootNode()": {
+                                "new FiberRootNode()": {
+                                    "detail": "FiberRoot",
                                     "createHostRootFiber()": {
                                         "Return createFiber()": {
                                             "Return HostRoot = new FiberNode()": null
