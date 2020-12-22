@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-graph/build/static/css/main.2c6c8454.chunk.css",
+    "main.js": "/react-graph/build/static/js/main.3e07e0c5.chunk.js",
+    "main.js.map": "/react-graph/build/static/js/main.3e07e0c5.chunk.js.map",
+    "runtime-main.js": "/react-graph/build/static/js/runtime-main.2d9d7072.js",
+    "runtime-main.js.map": "/react-graph/build/static/js/runtime-main.2d9d7072.js.map",
+    "static/js/2.b9d4f760.chunk.js": "/react-graph/build/static/js/2.b9d4f760.chunk.js",
+    "static/js/2.b9d4f760.chunk.js.map": "/react-graph/build/static/js/2.b9d4f760.chunk.js.map",
+    "static/js/3.da95e7af.chunk.js": "/react-graph/build/static/js/3.da95e7af.chunk.js",
+    "static/js/3.da95e7af.chunk.js.map": "/react-graph/build/static/js/3.da95e7af.chunk.js.map",
+    "index.html": "/react-graph/build/index.html",
+    "static/css/main.2c6c8454.chunk.css.map": "/react-graph/build/static/css/main.2c6c8454.chunk.css.map",
+    "static/js/2.b9d4f760.chunk.js.LICENSE.txt": "/react-graph/build/static/js/2.b9d4f760.chunk.js.LICENSE.txt",
+    "static/media/SubTree.scss": "/react-graph/build/static/media/element-icons.45201881.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2d9d7072.js",
+    "static/js/2.b9d4f760.chunk.js",
+    "static/css/main.2c6c8454.chunk.css",
+    "static/js/main.3e07e0c5.chunk.js"
+  ]
+}
