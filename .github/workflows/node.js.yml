@@ -28,6 +28,7 @@ jobs:
       - run: cp -r .git build/
       - run: cd build
       - run: |
+          git fetch
           git checkout pages
           git add .
           git commit -m "github action deploy $(date)"
