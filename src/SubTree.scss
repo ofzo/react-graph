@@ -19,28 +19,57 @@
     &.vertical {
         display: flex;
         flex-direction: column;
-        padding: 0 20px 10px 20px;
-        border-left: 2px solid;
-        border-right: 2px solid;
+        padding: 0 20px 0 20px;
+        border: 1px solid;
+        border-radius: 0 0 4px 4px;
+        margin-bottom: 6px;
     }
 }
 
 .sub-tree .name {
     position: relative;
     padding: 0 10px 0 30px;
-    line-height: 2;
+    line-height: 30px;
+    height: 30px;
+    font-size: small;
     font-family: "JetBrains Mono";
     transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-    &.selected {
-        box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
+    &.selected::before {
+        $offset: 30%;
+        background: linear-gradient(
+            115deg,
+            transparent 0%,
+            transparent $offset,
+            rgba(white, 0.3) ($offset + 2%),
+            transparent ($offset + 4%),
+            rgba(white, 0.3) ($offset + 6%),
+            rgba(white, 0.3) ($offset + 16%),
+            transparent ($offset + 18%),
+            rgba(white, 0.3) ($offset + 20%),
+            transparent ($offset + 22%),
+            transparent 100%
+        );
+        animation: flush 2s cubic-bezier(0.47, 0, 0.52, 0.99) 0s infinite;
+    }
+    &.important {
+        color: red;
+        font-weight: bold;
     }
     .fn {
         // position: sticky;
         // left: 0;
-        .flod::after {
+        .fold-flag::after {
             content: " {...}";
             display: inline;
             color: rgba($color: #000000, $alpha: 0.5);
+        }
+        .tag {
+            padding: 2px 4px;
+            border: 1px solid red;
+            font-size: x-small;
+            border-radius: 4px;
+            box-shadow: 0 0 4px 0 rgba($color: #000000, $alpha: 0.5);
+            transform: skewX(-20deg);
         }
     }
     .arrow {
@@ -55,5 +84,13 @@
         &.un-fold::before {
             content: "\e6df";
         }
+    }
+}
+@keyframes flush {
+    from {
+        margin-left: -100%;
+    }
+    to {
+        margin-left: 100%;
     }
 }

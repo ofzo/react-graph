@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
+import callStack from "./call-stack";
 import Context from "./context";
-import flameGraph from "./flameGraph.json";
 import SubTree from "./SubTree";
 
 export default class App extends React.Component {
     constructor(props) {
         super(props)
-        this.state = { select: "", root: flameGraph }
+        this.state = { select: "", root: callStack }
 
     }
     render() {
@@ -22,13 +22,13 @@ export default class App extends React.Component {
                 }
             }}>
                 <div className="App">
-                    {this.state.root === flameGraph ? null : <div className="back" onClick={() => {
-                        this.setState({ root: flameGraph })
+                    {this.state.root === callStack ? null : <div className="back" onClick={() => {
+                        this.setState({ root: callStack })
                     }}>返回到 ReactDOM.render</div>}
                     <div className={"flag " + (this.state.select ? 'show' : 'hide')} onClick={() => { this.setState({ select: "" }) }}>{this.state.select}</div>
                     <div className="scroll">
                         <div className="inner">
-                            <SubTree name="React Flame Graph" fns={this.state.root} parent={flameGraph}></SubTree>
+                            <SubTree name="React Flame Graph" fn={this.state.root} ></SubTree>
                         </div>
                     </div>
                 </div>

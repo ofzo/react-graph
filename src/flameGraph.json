@@ -42,10 +42,8 @@
                                 "appendUpdateToQueue": {}
                             },
                             "scheduleWork": {
-                                "checkForNestedUpdates 1": {},
-                                "markUpdateTimeFromFiberToRoot 1": {},
-                                "checkForNestedUpdates 2": {},
-                                "markUpdateTimeFromFiberToRoot 2": {},
+                                "checkForNestedUpdates": {},
+                                "markUpdateTimeFromFiberToRoot": {},
                                 "checkForInterruption": {},
                                 "recordScheduleUpdate": {},
                                 "getCurrentPriorityLevel": {},

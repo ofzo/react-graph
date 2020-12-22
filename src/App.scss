@@ -13,6 +13,7 @@
     border: 1px sandybrown solid;
     padding: 4px 10px;
     transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    z-index: 1000;
 }
 .App .flag.show {
     transform: translateX(0);
