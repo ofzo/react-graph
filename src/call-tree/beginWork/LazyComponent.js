@@ -18,20 +18,20 @@ module.exports = [{
             fns: [{
                 name: "@case FunctionComponent",
                 statement: true,
-                fns: [require("./FunctionComponent")]
+                fns: require("./FunctionComponent")
             }, {
                 name: "@case ClassComponent",
                 statement: true,
-                fns: [require("./ClassComponent")]
+                fns: require("./ClassComponent")
             }, {
                 name: "@case ForwardRef",
                 statement: true,
-                fns: [require("./ForwardRef")]
+                fns: require("./ForwardRef")
             }, {
                 name: "MemoComponent",
                 fns: [{
                     name: "resolveDefaultProps"
-                }, require("./MemoComponent")]
+                }, require("./MemoComponent")[0]]
             }]
         }]
     }]
